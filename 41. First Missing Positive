@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int firstMissingPositive(vector<int>& nums) {
+        for(int i=1;i<=nums.size()+1;i++)
+        {
+            bool missing_flag=true;
+            for(int j=0;j<nums.size();j++)
+            {
+                if(nums[j]==i)
+                {
+                    missing_flag=false;
+                    break;
+                }
+            }
+            if(missing_flag==true)
+            {
+                return i;
+            }
+        }
+        }
+};
